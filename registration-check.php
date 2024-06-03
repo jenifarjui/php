@@ -8,5 +8,6 @@ if(isset($_POST['registration_submit'])){
     $email =htmlspecialchars($_POST['email']);
     $password =htmlspecialchars($_POST['password']);
     $number =htmlspecialchars($_POST['number']);
+    $submit =htmlspecialchars($_POST['submit']);
 }
 ?>
