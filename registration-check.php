@@ -16,7 +16,6 @@ if (isset($_POST['registration_submit'])) {
 
 
 
-
     // alert 2 type of alert
     // danger
     // success
