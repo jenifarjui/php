@@ -8,13 +8,23 @@ include_once('include/header.php');
     <div class="container">
         <form action="registration-check.php" method="post">
             <h2>Registration On your account</h2>
-            <?php if(isset($_SESSION['alert'])){ ?>
-            <div class="alert" style="background-color: #f95959;color:white;font-size:15px;padding:15px;border-radius:12px">
-                <?php echo $_SESSION['alert']['message'];
-                unset($_SESSION['alert'])
+          <?php
+                 if(isset($_SESSION['alert'])){
+                    
                  ?>
-            </div>
-            <?php } ?>
+
+            <div class="alert" style="background-color: #f95959;color:white;font-size:15px;padding:15px;border-radius:12px">
+               <?php
+               echo $_SESSION['alert']['message'];
+               unset ($_SESSION['alert'])?>
+               
+               </div>
+               
+                <?php
+                 } 
+                ?>
+              
+            
             <label for="name">Name</label>
             <input type="text" id="name" placeholder="enter you name" name="name" required>
             <label for="email">Email</label>

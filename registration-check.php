@@ -3,12 +3,18 @@ session_start();
 
 if (isset($_POST['registration_submit'])) {
     $name = htmlspecialchars(trim($_POST['name']));
-    $email = htmlspecialchars($_POST['email']); // you do 
-    $password = htmlspecialchars($_POST['password']); // you do 
-    $number = htmlspecialchars($_POST['number']); // you do 
+    $email = htmlspecialchars(trim($_POST['email'])); 
+    $password = htmlspecialchars(trim($_POST['password'])); 
+    $number = htmlspecialchars(trim($_POST['number'])); 
     if (empty($name)) {
         $_SESSION['alert']['type'] = 'danger';
         $_SESSION['alert']['message'] = 'your name is empty';
+        header('Location:registration.php');
+        exit();
+    }
+    if (empty($email)){
+        $_SESSION['alert']['type']='danger';
+        $_SESSION['alert']['message']='your email is empty';
         header('Location:registration.php');
         exit();
     }
