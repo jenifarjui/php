@@ -1,4 +1,5 @@
 git<?php
+
 include_once('include/header.php'); ?>
 
 
@@ -18,4 +19,8 @@ include_once('include/header.php'); ?>
         </form>
     </div>
 </section>
-<?php include_once('include/footer.php'); ?>
+<?php
+
+
+unset($_SESSION['abcd']);
+include_once('include/footer.php'); ?>
