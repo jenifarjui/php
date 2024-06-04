@@ -10,4 +10,5 @@ if(isset($_POST['registration_submit'])){
     $number =htmlspecialchars($_POST['number']);
     $submit =htmlspecialchars($_POST['submit']);
 }
+
 ?>
